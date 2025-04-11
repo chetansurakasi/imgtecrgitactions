@@ -13,17 +13,12 @@ terraform {
     }
   }
 }
-
-resource "aws_ecr_repository" "my_ecr_repo" {
-  name                 = "my-app-repo"
-  image_tag_mutability = "MUTABLE" # or "IMMUTABLE"
+resource "aws_s3_bucket" "my_s3_bucket" {
+  bucket = "mchetanjsrfbjsh"  # Replace with a globally unique name
+  force_destroy = true  # Optional: allows deletion of non-empty bucket
 
   tags = {
-    Name        = "MyAppECR"
+    Name        = "MyAppBucket"
     Environment = "Dev"
   }
-
 }
-
-
-
