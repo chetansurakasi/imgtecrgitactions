@@ -14,7 +14,7 @@ terraform {
   }
 }
 resource "aws_s3_bucket" "my_s3_bucket" {
-  bucket = "mchetanjsrfbjsh"  # Replace with a globally unique name
+  bucket = "mchetnjsrfbjsh"  # Replace with a globally unique name
   force_destroy = true  # Optional: allows deletion of non-empty bucket
 
   tags = {
